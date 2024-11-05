@@ -26,6 +26,7 @@
     height: 100%;
     overflow: hidden;
     font-family: 'Garet', Arial, sans-serif;
+    font-weight: normal; /* Use the standard Garet font */
   }
   
   /* Intro Screen */
@@ -33,7 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black; /* Set background to black */
+    background-color: black;
     position: absolute;
     top: 0;
     left: 0;
@@ -50,14 +51,15 @@
   
   #typing-text {
     font-size: 2em;
-    color: white; /* Set text color to white */
+    color: white;
     white-space: nowrap;
     overflow: hidden;
     display: inline;
+    font-weight: normal; /* Use standard Garet format */
   }
   
   #cursor {
-    border-right: 0.15em solid white; /* Set cursor color to white */
+    border-right: 0.15em solid white;
     animation: blink-caret 0.5s step-end infinite;
     display: inline;
   }
@@ -76,7 +78,7 @@
     min-height: 100vh;
     flex-direction: column;
     position: relative;
-    background-image: url('olcbanner.png'); /* Set background image here */
+    background-image: url('olcbanner.png');
     background-size: cover;
     background-position: center;
   }
@@ -87,7 +89,7 @@
     font-family: 'Garet', Arial, sans-serif;
     color: white;
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: normal; /* Use standard Garet format */
   }
   
   .top-links {
@@ -140,7 +142,7 @@
     font-family: 'Garet', Arial, sans-serif;
     color: white;
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: normal; /* Use standard Garet format */
     display: inline;
   }
   
