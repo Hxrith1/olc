@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("fade-in-video");
   
     // Intro screen text
-    const text = "ONE LAST CHANCE TO MAKE AMERICA GREAT AGAIN";
+    const text = "ONE LAST CHANCE TO MAKE\nAMERICA GREAT AGAIN"; // Add line breaks for smaller screens
     const ellipsis = "...";
     let index = 0;
   

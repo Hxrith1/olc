@@ -41,8 +41,8 @@
     height: 100%;
     z-index: 10;
     transition: opacity 1s ease;
-    text-align: center; /* Center text on smaller screens */
-    padding: 0 10px; /* Add padding to prevent overflow */
+    text-align: center;
+    padding: 0 10px;
   }
   
   .intro-screen.fade-out {
@@ -53,10 +53,12 @@
   #typing-text {
     font-size: 2em;
     color: white;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline;
+    white-space: normal; /* Allow wrapping */
+    overflow-wrap: break-word; /* Break long words if needed */
+    word-wrap: break-word;
+    display: inline-block;
     font-weight: normal;
+    max-width: 90%; /* Constrain width to avoid overflow */
   }
   
   #cursor {
@@ -82,8 +84,8 @@
     background-image: url('olcbanner.png');
     background-size: cover;
     background-position: center;
-    text-align: center; /* Center text on mobile */
-    padding: 0 10px; /* Add padding to prevent overflow */
+    text-align: center;
+    padding: 0 10px;
   }
   
   /* Styling for Top Links and Contract Address */
@@ -139,7 +141,7 @@
   .contract-address {
     margin-top: 20px;
     text-align: center;
-    padding: 0 10px; /* Add padding to prevent overflow */
+    padding: 0 10px;
   }
   
   #contract-typing {
@@ -148,6 +150,7 @@
     font-size: 1.2em;
     font-weight: normal;
     display: inline;
+    max-width: 90%; /* Constrain width to avoid overflow */
   }
   
   #contract-cursor {
@@ -159,7 +162,8 @@
   /* Responsive Design for Smaller Screens */
   @media (max-width: 768px) {
     #typing-text {
-      font-size: 1.5em; /* Reduce font size on smaller screens */
+      font-size: 1.2em; /* Reduce font size on smaller screens */
+      max-width: 90%;
     }
     
     .top-links a {
@@ -167,7 +171,8 @@
     }
     
     #contract-typing {
-      font-size: 1em; /* Reduce contract address font size on smaller screens */
+      font-size: 1em;
+      max-width: 90%;
     }
   }
   
