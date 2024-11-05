@@ -33,7 +33,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white; /* Remove background image */
+    background-color: black; /* Set background to black */
     position: absolute;
     top: 0;
     left: 0;
@@ -50,14 +50,14 @@
   
   #typing-text {
     font-size: 2em;
-    color: black;
+    color: white; /* Set text color to white */
     white-space: nowrap;
     overflow: hidden;
     display: inline;
   }
   
   #cursor {
-    border-right: 0.15em solid black;
+    border-right: 0.15em solid white; /* Set cursor color to white */
     animation: blink-caret 0.5s step-end infinite;
     display: inline;
   }
@@ -83,11 +83,11 @@
   
   /* Styling for Top Links and Contract Address */
   .top-links a, .contract-address h2 {
-    text-decoration: none; /* Remove underline */
-    font-family: 'Garet', Arial, sans-serif; /* Apply Garet font */
-    color: white; /* Ensure link text is white */
-    font-size: 1.2em; /* Slightly larger text */
-    font-weight: bold; /* Make the text bold */
+    text-decoration: none;
+    font-family: 'Garet', Arial, sans-serif;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
   }
   
   .top-links {
@@ -126,8 +126,8 @@
     height: auto;
     border: 2px solid #ccc;
     border-radius: 8px;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 2s ease-in; /* Fade-in transition */
+    opacity: 0;
+    transition: opacity 2s ease-in;
   }
   
   /* Contract Address Styling */
@@ -137,7 +137,7 @@
   }
   
   #contract-typing {
-    font-family: 'Garet', Arial, sans-serif; /* Apply Garet font */
+    font-family: 'Garet', Arial, sans-serif;
     color: white;
     font-size: 1.2em;
     font-weight: bold;
