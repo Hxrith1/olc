@@ -1,3 +1,18 @@
+/* Include Garet Font */
+@font-face {
+  font-family: 'Garet';
+  src: url('fonts/Garet-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Garet';
+  src: url('fonts/Garet-Heavy.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 /* Reset basic styles */
 * {
   margin: 0;
@@ -5,11 +20,12 @@
   box-sizing: border-box;
 }
 
+/* Apply Garet font to the entire document */
 body, html {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  font-family: 'Garet', sans-serif;
+  font-family: 'Garet', Arial, sans-serif;
 }
 
 /* Intro Screen */
@@ -17,7 +33,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: white; /* Updated to white */
   position: absolute;
   top: 0;
   left: 0;
@@ -25,6 +41,8 @@ body, html {
   height: 100%;
   z-index: 10;
   transition: opacity 1s ease;
+  text-align: center;
+  padding: 0 10px;
 }
 
 .intro-screen.fade-out {
@@ -32,32 +50,31 @@ body, html {
   pointer-events: none;
 }
 
-/* Centered Typing Effect for Intro Text */
+/* Typing Effect for Intro Text */
 #typing-text {
   font-size: 2em;
-  color: #FFD700; /* Gold color */
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.15em solid #FFD700; /* Gold color */
-  animation: typing 4s steps(40, end), blink-caret 0.5s step-end infinite;
-  width: 0; /* Initially set width to 0 */
-  text-align: center;
-  transform: translateX(-50%);
-  position: relative;
-  left: 50%;
+  color: gold; /* Updated to gold */
+  white-space: normal; /* Allow wrapping */
+  overflow-wrap: break-word; /* Break long words if needed */
+  word-wrap: break-word;
+  display: inline-block;
+  font-weight: bold;
+  max-width: 90%; /* Constrain width to avoid overflow */
 }
 
-/* Typing Animation */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+#cursor {
+  border-right: 0.15em solid gold; /* Updated to match text color */
+  animation: blink-caret 0.5s step-end infinite;
+  display: inline;
 }
 
 @keyframes blink-caret {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
-/* Main Content Hidden Initially */
+/* Main Content with Background Image */
 .main-content {
   display: flex;
   justify-content: center;
@@ -65,6 +82,20 @@ body, html {
   min-height: 100vh;
   flex-direction: column;
   position: relative;
+  background-image: url('olcbanner.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* Styling for Top Links and Contract Address */
+.top-links a, .contract-address h2 {
+  text-decoration: none;
+  font-family: 'Garet', Arial, sans-serif;
+  color: gold; /* Updated to gold */
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 /* Positioning for the top links */
@@ -80,20 +111,17 @@ body, html {
 .top-left {
   position: absolute;
   left: 20px;
-  color: #FFD700; /* Gold color */
 }
 
 .top-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  color: #FFD700; /* Gold color */
 }
 
 .top-right {
   position: absolute;
   right: 20px;
-  color: #FFD700; /* Gold color */
 }
 
 /* Centered video styling */
@@ -110,4 +138,43 @@ video {
   border-radius: 8px;
   opacity: 0; /* Initially hidden */
   transition: opacity 2s ease-in; /* Fade-in transition */
+}
+
+/* Contract Address Styling */
+.contract-address {
+  margin-top: 20px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+#contract-typing {
+  font-family: 'Garet', Arial, sans-serif;
+  color: gold; /* Updated to gold */
+  font-size: 1.2em;
+  font-weight: bold;
+  display: inline;
+  max-width: 90%; /* Constrain width to avoid overflow */
+}
+
+#contract-cursor {
+  border-right: 0.15em solid gold; /* Updated to match text color */
+  animation: blink-caret 0.5s step-end infinite;
+  display: inline;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  #typing-text {
+      font-size: 1.2em; /* Reduce font size on smaller screens */
+      max-width: 90%;
+  }
+  
+  .top-links a {
+      font-size: 1em; /* Reduce link font size on smaller screens */
+  }
+  
+  #contract-typing {
+      font-size: 1em;
+      max-width: 90%;
+  }
 }
