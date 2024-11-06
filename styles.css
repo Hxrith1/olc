@@ -26,6 +26,7 @@ body, html {
   height: 100%;
   overflow: hidden;
   font-family: 'Garet', Arial, sans-serif;
+  background-color: black; /* Set body background to black */
 }
 
 /* Intro Screen */
@@ -33,7 +34,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black; /* Set back to black */
+  background-color: black; /* Keep intro screen black */
   position: absolute;
   top: 0;
   left: 0;
@@ -54,12 +55,12 @@ body, html {
 #typing-text {
   font-size: 2em;
   color: gold; /* Text color set to gold */
-  white-space: normal; /* Allow wrapping */
-  overflow-wrap: break-word; /* Break long words if needed */
+  white-space: normal;
+  overflow-wrap: break-word;
   word-wrap: break-word;
   display: inline-block;
   font-weight: bold;
-  max-width: 90%; /* Constrain width to avoid overflow */
+  max-width: 90%;
 }
 
 #cursor {
@@ -74,7 +75,7 @@ body, html {
   }
 }
 
-/* Main Content with Background Image */
+/* Main Content */
 .main-content {
   display: flex;
   justify-content: center;
@@ -82,9 +83,7 @@ body, html {
   min-height: 100vh;
   flex-direction: column;
   position: relative;
-  background-image: url('goldenbull.png');
-  background-size: cover;
-  background-position: center;
+  background-color: black; /* Keep main content background plain black */
   text-align: center;
   padding: 0 10px;
 }
@@ -93,7 +92,7 @@ body, html {
 .top-links a, .contract-address h2 {
   text-decoration: none;
   font-family: 'Garet', Arial, sans-serif;
-  color: gold; /* Updated to gold */
+  color: gold; /* Text color set to gold */
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -124,7 +123,7 @@ body, html {
   right: 20px;
 }
 
-/* Centered video styling */
+/* Centered video styling with golden border */
 .video-container {
   display: flex;
   justify-content: center;
@@ -134,7 +133,7 @@ body, html {
 video {
   max-width: 80%;
   height: auto;
-  border: 2px solid #ccc;
+  border: 5px solid gold; /* Golden border around the video */
   border-radius: 8px;
   opacity: 0; /* Initially hidden */
   transition: opacity 2s ease-in; /* Fade-in transition */
@@ -153,7 +152,7 @@ video {
   font-size: 1.2em;
   font-weight: bold;
   display: inline;
-  max-width: 90%; /* Constrain width to avoid overflow */
+  max-width: 90%;
 }
 
 #contract-cursor {
@@ -165,16 +164,16 @@ video {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   #typing-text {
-      font-size: 1.2em; /* Reduce font size on smaller screens */
-      max-width: 90%;
+    font-size: 1.2em;
+    max-width: 90%;
   }
   
   .top-links a {
-      font-size: 1em; /* Reduce link font size on smaller screens */
+    font-size: 1em;
   }
   
   #contract-typing {
-      font-size: 1em;
-      max-width: 90%;
+    font-size: 1em;
+    max-width: 90%;
   }
 }
