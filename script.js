@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let index = 0;
   
     // Contract address text
-    const contractText = "Contract Address: ";
+    const contractText = "Contract Address: 6hkffbamK1HHnxrxngxfVde4yoJDR6pTcErPZ9zvpump";
     const contractTypingText = document.getElementById("contract-typing");
     const contractCursor = document.getElementById("contract-cursor");
     let contractIndex = 0;
